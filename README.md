@@ -6,18 +6,22 @@
 
 > IAM policy generation from application code
 
+## Installation
+
+```
+go install
+```
+
 ## Usage
 
 ```
-cd go
-go build -o iamfast
-./iamfast yourfile.go
+iamfast-go yourfile.go
 ```
 
 ## Example
 
 ```
-% cat go/tests/test1.go
+> cat go/tests/test1.go
 package main
 
 import (
@@ -45,9 +49,7 @@ func main() {
 ```
 
 ```
-% cd go
-% go build -o iamfast
-% ./iamfast tests/test1.go
+> iamfast-go tests/test1.go
 {
     "Version": "2012-10-17",
     "Statement": [
